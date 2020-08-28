@@ -1,0 +1,35 @@
+HTTP/1.1 404 Not Found
+Content-Type: text/html
+
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8"/>
+        <title> 404 Not Found </title>
+        <style>
+            * { text-align: center; }
+            .info * { text-align: left; text-indent: 10px; }
+            .info span { color: red; }
+            .info #autowrite { color: black; }
+        </style>
+    </head>
+    <body>
+        <h1> 404 Not Found </h1>
+        <hr/>
+        <p> pyTCPServer </p>
+        <div class="info">
+            <p> 
+                <span> ERROR: </span> The requested URL doesn't exist on the server. 
+            </p>
+            <p> 
+                <span> YOU REQUESTED: </span>
+                <span id="autowrite"> </span>
+            </p>
+        </div>
+        <script>
+            text = %s
+            target = document.getElementById("autowrite")
+            target.innerText = text
+        </script>
+    </body>
+</html>
